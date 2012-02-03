@@ -1,0 +1,21 @@
+{
+  "author": "Jakob Bysewski",
+  "name": "coffee-collection",
+  "description": "Collection utils written in CoffeeScript",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jbysewski/coffee-collection.git"
+  },
+  "scripts": {
+    "test": "vows -spec"
+  },
+  "engines": {
+    "node": ">=v0.4.7"
+  },
+  "dependencies": {},
+  "devDependencies": { 
+    "vows": ">=v0.5.8",
+    "coffee-script": ">=v1.1.1"
+  }
+}
