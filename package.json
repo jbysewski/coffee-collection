@@ -1,7 +1,7 @@
 {
   "author": "Jakob Bysewski",
   "name": "coffee-collection",
-  "description": "Collection utils written in CoffeeScript",
+  "description": "A fine collection of collection-classes and utilities written in CoffeScript. Intended for Node- and client-side usage.",
   "version": "0.0.1",
   "repository": {
     "type": "git",
