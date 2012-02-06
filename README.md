@@ -11,6 +11,15 @@ Currently contains
 * Graph - a set of nodes where each node max be conected with other nodes
   making a path
 
+API
+---
+* Set
+  * **!Important!* If an element has an .equals-method it is used to determine
+    if other items are treated as the same - otherwise the is-operator (===) is
+    used
+  * add: Adds an element if it is not already contained
+  * remove: Removes an element
+
 Examples
 --------
 ### Set
