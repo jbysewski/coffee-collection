@@ -1,38 +1,21 @@
 root = exports ? this
 
 {Node} = require './Node'
+{Map} = require './Map'
 
 class root.Graph
-   constructor: ->
-      @nodes = []
+   constructor: -> @nodes = new Map
 
-   addBiEdge: (from, to) ->
-      @addEdge from, to, true
+   addBiEdge: (from, to) -> @addEdge from, to, true
 
    addEdge: (from, to, bidirectional = false) ->
-      from = @addNode from
-      to = @addNode to
+      @addNode from
+      @addNode to
       from.follow to
       if bidirectional then to.follow from
 
-   _makeNode: (possibleNode) ->
-      if possibleNode instanceof Node
-         possibleNode
-      else
-         new Node possibleNode
+   numberOfNodes: -> @nodes.size()
 
-   numberOfNodes: -> @nodes.length
+   addNode: (node) -> @nodes.put node.id, node
 
-   addNode: (node) ->
-      existing = @findNode node
-      if existing?
-         return existing
-      newNode = @_makeNode node
-      @nodes.push newNode
-      newNode
-
-   findNode: (node) ->
-      if node in @nodes 
-         return node
-      if (existing = @nodes.filter (existing) -> existing.id is node).length
-         return existing[0]
+   findNode: (id) -> @nodes.get id

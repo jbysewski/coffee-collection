@@ -4,7 +4,6 @@ assert = require 'assert'
 
 class Equal
    constructor: (@id) ->
-
    equals: (other) -> @id is other.id
 
 suite = vows.describe 'Set'
