@@ -1,7 +1,7 @@
 vows = require 'vows'
 assert = require 'assert'
-{Graph} = require '../lib/Graph'
-{Node} = require '../lib/Node'
+{Graph} = require '../src/Graph'
+{Node} = require '../src/Node'
 
 suite = vows.describe 'Graph'
 suite.addBatch

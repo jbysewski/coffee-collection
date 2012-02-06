@@ -1,7 +1,7 @@
 vows = require 'vows'
 assert = require 'assert'
-{Map} = require '../lib/Map'
-{Set} = require '../lib/Set'
+{Map} = require '../src/Map'
+{Set} = require '../src/Set'
 
 suite = vows.describe 'Map'
 suite.addBatch

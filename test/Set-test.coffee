@@ -1,6 +1,6 @@
 vows = require 'vows'
 assert = require 'assert'
-{Set} = require '../lib/Set'
+{Set} = require '../src/Set'
 
 class Equal
    constructor: (@id) ->
