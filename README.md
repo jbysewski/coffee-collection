@@ -1,7 +1,7 @@
 Coffee-Collection
 =================
 
-A fine _collection_ of [collection](http://en.wikipedia.org/wiki/Collection_(computing))-classes and utilities written in CoffeScript.
+A fine _collection_ of [collection](http://en.wikipedia.org/wiki/Collection_(computing) "Collection_(computing)")-classes and utilities written in CoffeScript.
 Intended for Node- and client-side usage.
 
 Currently contains
