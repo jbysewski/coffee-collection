@@ -17,7 +17,9 @@ API
   * **!Important!** If an element has an .equals-method it is used to determine
     if other items are treated as the same - otherwise the is-operator (===) is
     used
-  * ```coffeescript add element```: Adds an element if it is not already contained
+  * ```coffeescript
+    add element
+    ```: Adds an element if it is not already contained
   * addAll ['a', 'b'] | otherSet: adds all elements from an array or other set
   * remove element: Removes an element
   * removeAll ['a', 'b'] | otherSet: removes all elements from an array or other set
