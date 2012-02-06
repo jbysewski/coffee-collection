@@ -17,14 +17,14 @@ API
   * **!Important!** If an element has an .equals-method it is used to determine
     if other items are treated as the same - otherwise the is-operator (===) is
     used
-  * add element: Adds an element if it is not already contained
+  * ```coffeescript add element```: Adds an element if it is not already contained
   * addAll ['a', 'b'] | otherSet: adds all elements from an array or other set
   * remove element: Removes an element
   * removeAll ['a', 'b'] | otherSet: removes all elements from an array or other set
   * clear(): Removes all elements
   * size(): Returns the number of elements contained in this set
   * isEmtpy(): Returns true if this set is empty
-  * has element: Returns true if ```element.equals other``` returns true for
+  * has element: Returns true if ```coffeescript element.equals other``` returns true for
     any other element or - if element does not have a method equals - if an
     contained element is equal in terms of (===)
 
