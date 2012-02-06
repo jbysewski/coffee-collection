@@ -26,7 +26,10 @@ API
   * clear(): Removes all elements
   * size(): Returns the number of elements contained in this set
   * isEmtpy(): Returns true if this set is empty
-  * has element: Returns true if ```coffeescript element.equals other``` returns true for
+  * has element: Returns true if 
+    ```coffeescript
+    element.equals other
+    ``` returns true for
     any other element or - if element does not have a method equals - if an
     contained element is equal in terms of (===)
 
