@@ -1,4 +1,4 @@
-Coffee-Collection
+Coffee-Collection[![Build Status](https://secure.travis-ci.org/[YOUR_GITHUB_USERNAME]/[YOUR_PROJECT_NAME].png)](http://travis-ci.org/jbysewski/coffee-collection)
 =================
 
 A fine _collection_ of [collection](http://en.wikipedia.org/wiki/Collection_\(computing\))-classes and utilities written in CoffeScript.
