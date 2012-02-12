@@ -15,6 +15,19 @@ suite.addBatch
          assert.equal set.size(), 0
          assert.isTrue set.isEmpty()
 
+      'equals should work': (set) ->
+         assert.isFalse set.equals '42'
+         other = new Set
+         assert.isTrue set.equals other
+         set.add 'one'
+         assert.isFalse set.equals other
+         other.add 'one'
+         assert.isTrue set.equals other
+         set.add 'two'
+         assert.isFalse set.equals other
+         other.add 'two'
+         assert.isTrue set.equals other
+
    'Add':
       topic: new Set
       
@@ -37,6 +50,12 @@ suite.addBatch
          set.clear()
          set.addAll ['one', 'two', 'three']
          assert.equal set.size(), 3
+      
+      'addAll should work with another Set': (set) ->
+         set.clear()
+         other = new Set ['one', 'two', 'three']
+         set.addAll other
+         assert.isTrue set.equals other
 
       'add should not add existing item': (set) ->
          set.clear()

@@ -13,6 +13,7 @@ class root.Graph
       @addNode to
       from.follow to
       if bidirectional then to.follow from
+      return [from, to]
 
    numberOfNodes: -> @nodes.size()
 

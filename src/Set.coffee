@@ -8,19 +8,17 @@ class root.Set
    clear: -> @_items = []
 
    addAll: (items) ->
+      if items instanceof root.Set then items = items.elements()
       @add item for item in items
       this
 
    has: (item) ->
-      if item.equals?
-         return @_items.some (existing) -> item.equals existing
+      if item.equals? then return @_items.some (existing) -> item.equals existing
       !!~ @_items.indexOf item
 
-   size: ->
-      @_items.length
+   size: -> @_items.length
 
-   isEmpty: ->
-      @size() is 0
+   isEmpty: -> @size() is 0
 
    add: (item) ->
       if not @has item
@@ -42,4 +40,7 @@ class root.Set
 
    elements: -> @_items
 
-
+   equals: (other) ->
+      if other instanceof root.Set and @size() is other.size() and (@_items.every (item) -> other.has item)
+         return true
+      return false
