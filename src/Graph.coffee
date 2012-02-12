@@ -16,7 +16,5 @@ class root.Graph
       return [from, to]
 
    numberOfNodes: -> @nodes.size()
-
    addNode: (node) -> @nodes.put node.id, node
-
-   findNode: (id) -> @nodes.get id
+   findNode: (predicate) -> @nodes.get predicate

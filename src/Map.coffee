@@ -30,13 +30,21 @@ class root.Map
       @put key, entry for key,entry of map
       this
 
-   _getKeyEntry: (key) ->
-      if (existing = @_keyValueSet.elements().filter (item) -> item.keyEquals key).length
-        existing[0]
+   _getKeyEntry: (keyOrPredicate) ->
+      if (typeof keyOrPredicate is 'function') and (existing = @_keyValueSet.elements().filter (keyValue) -> keyOrPredicate keyValue.entry).length
+         if existing.length is 1 then return existing[0] else return existing
+      else if (existing = @_keyValueSet.elements().filter (item) -> item.keyEquals keyOrPredicate).length > 0
+         if existing.length is 1 then return existing[0] else return existing
       else
          null
 
-   get: (key) -> if (keyValue = @_getKeyEntry(key))? then keyValue.entry else null 
+   get: (keyOrPredicate) -> 
+      if (keyValues = @_getKeyEntry(keyOrPredicate))?
+         if keyValues.length?
+            keyValue.entry for keyValue in keyValues
+         else
+            keyValues.entry
+      else null
 
    keySet: ->
       result = new Set

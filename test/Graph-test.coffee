@@ -35,6 +35,14 @@ suite.addBatch
          n2 = new Node 'Test4'
          graph.addEdge n1, n2
          assert.equal graph.numberOfNodes(), 5
+
+      'findNode should work': (graph) ->
+         node = new Node 'NodeToFind'
+         node.someValue = 42
+         assert.isNull graph.findNode 'NodeToFind'
+         graph.addNode node
+         assert.equal graph.findNode('NodeToFind'), node
+         #assert.equal graph.findNode((node) -> node.someValue is 42), node
       
       'addBiEdge should work': (graph) ->
          n1 = graph.findNode 'Test1'

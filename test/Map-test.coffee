@@ -41,6 +41,14 @@ suite.addBatch
          map.clear()
          assert.isNull map.get 'non-existing'
 
+      'get should work with predicates': (map) ->
+         map.put 1, 'one'
+         assert.equal map.get((entry) -> entry is 'one'), 'one'
+
+      'get should return array when predicate matches multiple entries': (map) ->
+         map.put 2, 'two'
+         assert.deepEqual map.get((entry) -> true), ['one', 'two']
+
    'keySet':
       topic: new Map
 
